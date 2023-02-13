@@ -12,26 +12,26 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
+.  Yes, because $2^{n+1} \equiv 2^{n} * 2$, and since this is simply multiplying by a constant, it is in $O(2^n)$.
 .  
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
+.  It is not in $O(2^n)$, because if you take the limit as n approaches infinity, it is a magnitude bigger than $O(2^n)$.
 .  
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
-.  
-.  
+.  No, because when you take the limit as n approaches infinity and use L'Hopitals Rule, when using n instead of n^{1.01}, the derivative is 1, while
+.  the derivative of $\mathrm{log}^2 n$ is just a multiplication of a log divided by n, which implies that it will grow much slower than n. Since $n < n^{1.01}$,
+.  it must conclude that $n^{1.01}$ is also not in $O(\mathrm{log}^2 n)$.
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
-.  
+.  Yes, since from the previous problem we learned that $n$ would grow larger than $\mathrm{log}^2 n)$, then $n^{1.01}$ would also grow larger, and such asymptotically
+.  dominate.
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
