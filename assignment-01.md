@@ -35,12 +35,12 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
+.  No, because when taking the limit, you notice that $\sqrt{n}$ grows larger, as the derivative of $\sqrt{n} = \frac{1}{2\sqrt{n}}$, which grows faster as
+.  $\mathrm{log} n$ has a factor of n on the denominator.
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+.  Yes, since form the pervious problem we learned that $\sqrt{n}$ would grow faster.
 
 
 2. **SPARC to Python** (12 pts)
