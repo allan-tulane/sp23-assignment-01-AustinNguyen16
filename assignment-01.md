@@ -62,9 +62,8 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
-.  
-.  
+. This function first checks if x = 0 or 1, to which it will return 0. Then, it will recursively add x - 1 and x - 2 x times, to which the recursive function will 
+. stop once x = 1 or 0. The function will then return the Fibonnaci numbers where x = the "index" of the sequence.
 .  
 .  
 .  
