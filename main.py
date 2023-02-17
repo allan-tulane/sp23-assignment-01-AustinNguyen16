@@ -42,7 +42,32 @@ class Result:
     
 def longest_run_recursive(mylist, key):
     ### TODO
-    pass
+    def longest_run_recursive(mylist, key):
+    if len(mylist) == 0:
+        return 0
+    elif len(mylist) == 1:
+        if mylist[0] == key:
+            return 1
+        else:
+            return 0
+    else:
+        mid = len(mylist) // 2
+        left = longest_run_recursive(mylist[:mid],key)
+        right = longest_run_recursive(mylist[mid:],key)
+        left_val = 0
+        right_val = 0
+        for i in range(mid-1, -1, -1):
+            if mylist[i] == key:
+                left_val += 1
+            else:
+                break
+        for i in range(mid, len(mylist)):
+            if mylist[i] == key:
+                right_val += 1
+            else:
+                break
+        total_val = left_val + right_val
+        return max(left, right, total_val)
 
 ## Feel free to add your own tests here.
 def test_longest_run():
